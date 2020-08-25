@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+  <mat-toolbar color="primary">
+    <span>LocalCast Weather</span>
+  </mat-toolbar>
+  <div>Your city, your forecast, right now!</div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
+  </div>
+  
+  <div fxLayout="row" fxLayoutAlign ="center">
+    <div FvFlex></div>
+    <div fvFlex="300px"></div>
+    <mat-card>
+    <h2>Current Weather</h2>
+    <app-current-weather [current]="currentWeather"></app-current-weather>
+    </mat-card>
+    </div>
+  </div>
